@@ -1,0 +1,87 @@
+{% extends "base1.html" %} {% block content %}
+
+{% load crispy_forms_tags %}
+
+  
+  <body style="background-color:#d4d6da">
+    <div class="container">
+      <center>      
+        <br><div style="background-color: teal; color:white;">
+        
+            <h2 >Sanctioned Loan</h2>
+          </div></center>
+        <div class="jumbotron" >
+            
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Customer</th>
+            <th>Required Loan</th>
+            <th>Approved Loan</th>
+            <th>Tenure</th>
+            <th>Interest</th>
+            <th>EMI</th>
+            <th>Approved</th>
+            {% if user.status == 'OPERATION HEAD' %}
+            <th>Update</th>
+            <th>PDF</th>
+            {% endif %}
+          </tr>
+        </thead>
+
+        {% for sanction in sanction_obj %}
+        <tr>
+          <td>{{sanction.client}}</td>
+          <td>{{sanction.required_loan}}</td>
+          {% if sanction.approved_loan == None %}
+          <td>--</td>
+          {% else %}
+          <td>{{sanction.approved_loan}}</td>
+          {% endif %}
+          {% if sanction.tenure == None %}
+          <td>--</td>
+          {% else %}
+          <td>{{sanction.tenure}}</td>
+          {% endif %}
+          {% if sanction.interest == None %}
+          <td>--</td>
+          {% else %}
+          <td>{{sanction.interest}}</td>
+          {% endif %}
+
+          {% if sanction.emi == None %}
+          <td>--</td>
+          {% else %}
+          <td>{{sanction.emi}}</td>
+          {% endif %}
+
+
+
+          {% if sanction.is_approved == True %}
+          <td style="color:green">Approved</td>
+          {% else %}
+          <td style="color:red">Pending</td>
+          {% endif %}
+
+
+
+          {% if user.status == 'OPERATION HEAD' %}
+          <td>
+            <a href="#{% url 'update_sanction' sanction.id %}">
+              <button class="btn btn-outline-info  " style=" border-radius: 12px" type="button">Update</button></a>
+          </td>
+          <td>
+            <a href="#{% url 'index' sanction.id %}">
+              <button class="btn btn-outline-primary  " style=" border-radius: 12px" type="button">PDF</button></a>
+          </td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </table>
+
+  
+</div>
+</div>
+</body>
+
+{% endblock %}

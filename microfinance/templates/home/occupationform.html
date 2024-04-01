@@ -1,0 +1,46 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}<title>Occupation</title>{% endblock %}
+
+
+{% block content %}
+<body style="background-color:#d4d6da">
+
+    <div class="content" style="margin: 10%;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <!-- <div class="col-md-6 order-md-2">
+              <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+            </div> -->
+            <div class="col-md-6 contents ">
+              <div class="row justify-content-center">
+                <div class="col-md-12">
+                  <div class="form-block jumbotron" style="background-color:teal; padding:30px; border-radius: 40px;">
+                    <div class="text-light"><h3 style="text-align: center;">EMPLOYENT TYPE</h3>
+                      <div class="mb-4">  
+                      </div>
+                      <center>     
+                      <table>
+                           <tr>
+                            <td style="padding: 20px;"><a class="btn btn-warning" href="{% url 'salary_url' %}" role="button">Salaried</a></td>
+                            <td style="padding: 20px;"><a class="btn btn-danger" href="{% url 'selfemployed_url' %}" role="button">Self Employed</a></td>
+                          
+                         </tr>
+                         </table>
+                        </center>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+{% endblock %}
+
+

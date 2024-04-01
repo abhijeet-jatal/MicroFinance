@@ -1,0 +1,49 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}<title>salary</title>{% endblock %}
+
+
+{% block content %}
+<body style="background-color:#d4d6da">
+<div class="container" style="margin: 1%;">
+    <div class="jumbotron">
+        
+        <center>      
+            <br><div style="background-color: teal; color:white;">
+            
+                <h2 >SALARY DETAILS</h2>
+              </div></center>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="row">
+
+                <div class="form-group col-md-6 mb-2">
+                    {{form.client|as_crispy_field}}
+                </div>
+                
+                <div class="form-group col-md-6 mb-1">
+                    {{form.Designation|as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-1">
+                    {{form.Experience |as_crispy_field}}
+                </div>
+        
+                <div class="form-group col-md-6 mb-3">
+                    {{form.Monthly_Income |as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    {{form.Company_Name |as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-4">
+                    {{form.Company_Address |as_crispy_field}}
+                </div><br>
+            </div>
+                <center><input type="submit"  value="SAVE" class="btn btn-success" style="background-color: teal;"></center> 
+            
+        </form>
+    </div>
+</div>
+</body>
+{% endblock %}

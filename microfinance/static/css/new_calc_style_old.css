@@ -1,0 +1,898 @@
+.emiCal .formWrapper h3 {
+	padding-bottom: 1rem;
+}
+
+.emiCal .bannerText {
+	top: 0;
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+}
+
+.emiCal .finalResult p {
+	font-size: 1.4rem;
+	color: #323232;
+	display: inline-block;
+	width: 69%;
+}
+
+.emiCal .finalResult p span {
+	font-size: 2.3rem;
+	color: #ae285d;
+	padding: 0 0.5rem;
+}
+
+.emiCal .finalResult p span.rupee {
+	font-weight: 700;
+}
+
+.emiCal .finalResult p span.finalTotal {
+	font-family: Lato-heavy;
+}
+
+.emiCal .finalResult .viewAll {
+	width: 145px;
+	text-align: center;
+	position: relative;
+	left: 28px;
+	padding: 1rem 0;
+	display: inline-block;
+	color: #fff;
+}
+
+.ionSlider.newCalc {
+	padding: 0 20px 15px 5px;
+}
+
+.ionSlider.newCalc .inpt-slider {
+	margin: 20px 0 0;
+}
+
+.ionSlider.newCalc .inpt-slider .irs {
+	display: block;
+}
+
+.ionSlider.newCalc .inpt-slider .irs-with-grid {
+	width: 100%;
+	position: relative;
+	top: 20px;
+	left: 0;
+}
+
+.car.ionSlider.newCalc .inpt-slider .irs .irs-single {
+	background: url(../images/stearing.png) center center;
+	width: 30px;
+	height: 30px;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	top: -12px;
+}
+
+.ionSlider.newCalc .inpt-slider .irs .irs-single {
+	color: #ae275f;
+	background-color: #f4f4f4;
+	z-index: 5;
+	top: -8px;
+	/*margin: 0 0 0 6px;*/
+	border-radius: 50px;
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	border: solid 2px rgb(169, 27, 83);
+	text-indent: -10000px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.ionSlider .inpt-slider .irs .irs-max,
+.ionSlider .inpt-slider .irs .irs-min {
+	display: none;
+}
+
+.ionSlider.newCalc .inpt-slider .irs-bar {
+	background: rgb(169, 27, 83);
+	background: linear-gradient(90deg,
+			rgba(169, 27, 83, 1) 0%,
+			rgba(232, 38, 99, 1) 100%);
+	left: 0 !important;
+	border-radius: 10px;
+}
+
+.ionSlider .inpt-slider .irs-grid .irs-grid-pol {
+	display: none;
+}
+
+.ionSlider .inpt-slider .irs-grid .irs-grid-text {
+	display: none;
+	color: #323232;
+	font-size: 1.2rem;
+	line-height: inherit;
+}
+
+.ionSlider.newCalc .inpt-slider .irs-grid .js-grid-text-0 {
+	display: block;
+	position: absolute;
+	margin: 0 !important;
+}
+
+.ionSlider .inpt-slider .irs-grid .js-grid-text-4 {
+	display: block;
+	position: absolute;
+	top: -23px;
+	left: unset !important;
+	right: -57px;
+}
+
+.ionSlider .clssErrorMsg {
+	visibility: hidden;
+	position: relative;
+	top: 32px;
+	font-size: 1.1rem;
+	color: red;
+}
+
+.newCalc .inpt-statement label {
+	padding: 0;
+	display: inline-block;
+	font-size: 16px;
+	color: #333;
+	font-weight: 700;
+	margin: 0;
+}
+
+.newCalc .inpt-statement .inputBox {
+	float: right;
+	background: #fff;
+	border-radius: 5px;
+	padding: 3px 6px;
+	border: 1px solid #d5d5d5;
+	width: 135px;
+	color: #ae285d;
+	font-weight: 600;
+}
+
+.inpt-statement .inputBox .rupee {
+	color: #595959;
+	font-size: 1.4rem;
+	font-weight: 700;
+	border-right: 1px solid #eaeaea;
+	padding: 1rem 0;
+	width: 32px;
+	display: inline-block;
+	text-align: center;
+}
+
+.inpt-statement .inputBox input {
+	background: 0 0;
+	font-size: 1.5rem;
+	color: #595959;
+	font-weight: 700;
+	padding: 1rem 0.5rem;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+
+.inpt-statement .inputBox input:focus,
+.inpt-statement .inputBox input:hover {
+	outline: 0;
+}
+
+.inpt-statement .inputBox input.loanAmt {
+	width: 75%;
+	text-align: left;
+}
+
+.irs {
+	position: relative;
+	display: block;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.irs-line {
+	position: relative;
+	display: block;
+	/*overflow: hidden;*/
+	outline: 0 !important;
+}
+
+.irs-line-left,
+.irs-line-mid,
+.irs-line-right {
+	position: absolute;
+	display: block;
+	top: 0;
+}
+
+.irs-bar {
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 0;
+}
+
+.irs-bar-edge {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+}
+
+.irs-shadow {
+	position: absolute;
+	display: none;
+	left: 0;
+	width: 0;
+}
+
+.irs-slider {
+	position: absolute;
+	display: block;
+	cursor: default;
+	z-index: 1;
+}
+
+.irs-slider.type_last {
+	z-index: 2;
+}
+
+.irs-min {
+	position: absolute;
+	display: block;
+	left: 0;
+	cursor: default;
+}
+
+.irs-max {
+	position: absolute;
+	display: block;
+	right: 0;
+	cursor: default;
+}
+
+.irs-from,
+.irs-single,
+.irs-to {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	cursor: default;
+	white-space: nowrap;
+}
+
+.irs-grid {
+	position: absolute;
+	display: none;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 20px;
+}
+
+.newCalc .irs-with-grid .irs-grid {
+	display: none;
+}
+
+.irs-grid-pol {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 8px;
+	background: #000;
+}
+
+.irs-grid-pol.small {
+	height: 4px;
+}
+
+.irs-grid-text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 9px;
+	line-height: 9px;
+	padding: 0 3px;
+	color: #000;
+}
+
+.irs-disable-mask {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: -1%;
+	width: 102%;
+	height: 100%;
+	cursor: default;
+	background: 0 0;
+	z-index: 2;
+}
+
+.lt-ie9 .irs-disable-mask {
+	background: #000;
+	cursor: not-allowed;
+}
+
+.irs-disabled {
+	opacity: 0.4;
+}
+
+.irs-hidden-input {
+	position: absolute !important;
+	display: block !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 0 !important;
+	height: 0 !important;
+	font-size: 0 !important;
+	line-height: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	overflow: hidden;
+	outline: 0 !important;
+	z-index: -9999 !important;
+	background: 0 0 !important;
+	border-style: solid !important;
+	border-color: transparent !important;
+}
+
+/*.ionSlider.newCalc .inpt-slider .irs .irs {
+  height: 40px;
+}*/
+
+.newCalc .irs-with-grid {
+	height: 50px;
+}
+
+.ionSlider.newCalc .inpt-slider .irs .irs .irs-line {
+	height: 5px;
+	background-color: #d5d5d5;
+	border-radius: 10px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+	width: 100%;
+	top: 0;
+	overflow: inherit;
+}
+
+.ionSlider.newCalc .inpt-slider .irs .irs .irs-line-left {
+	height: 5px;
+	background-position: 0 -30px;
+	left: 0;
+	width: 11%;
+}
+
+.ionSlider.newCalc .inpt-slider .irs .irs .irs-line-mid {
+	height: 5px;
+	background-position: 0 0;
+	left: 9%;
+	width: 82%;
+}
+
+.ionSlider.newCalc .inpt-slider .irs .irs .irs-line-right {
+	height: 5px;
+	background-position: 100% -30px;
+	right: 0;
+	width: 11%;
+}
+
+.newCalc .irs-bar {
+	height: 5px;
+	top: 0px;
+	background-position: 0 -60px;
+}
+
+.irs-bar-edge {
+	top: 25px;
+	height: 6px;
+	width: 7px;
+	background-position: 0 -90px;
+}
+
+.irs-shadow {
+	height: 1px;
+	top: 34px;
+	background: #000;
+	opacity: 0.75;
+}
+
+.newCalc .irs-slider {
+	width: 8px;
+	height: 15px;
+	top: 21px;
+	background-position: 0 -120px;
+}
+
+.irs-slider.state_hover,
+.irs-slider:hover {
+	background-position: 0 -150px;
+}
+
+.irs-max,
+.irs-min {
+	color: silver;
+	font-size: 10px;
+	line-height: 1.333;
+	text-shadow: none;
+	top: 0;
+	padding: 1px 3px;
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
+}
+
+.lt-ie9 .irs-max,
+.lt-ie9 .irs-min {
+	background: #3654b0;
+}
+
+.irs-from,
+.irs-single,
+.irs-to {
+	color: #000;
+	font-size: 10px;
+	line-height: 1.333;
+	text-shadow: none;
+	padding: 1px 5px;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 3px;
+}
+
+.lt-ie9 .irs-from,
+.lt-ie9 .irs-single,
+.lt-ie9 .irs-to {
+	background: #d8dff3;
+}
+
+.irs-grid-pol {
+	background: #777;
+}
+
+.irs-grid-text {
+	color: #e0e0e0;
+}
+
+.internalFaqWrap {
+	padding-top: 2rem;
+}
+
+.internalFaqWrap .accContent {
+	display: none;
+}
+
+.callLocateWrapper img {
+	max-width: 100%;
+}
+
+.callUsBox p {
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: #323232;
+	margin: 0.5rem 0;
+}
+
+.callUsBox p.phnNo {
+	background: #ed1164;
+	padding: 0;
+	color: #fff;
+	font-size: 1.3rem;
+	width: 200px;
+	display: inline-block;
+	line-height: 11px;
+}
+
+.callUsBox p.phnNo span {
+	background: url(../images/sprite.png) no-repeat 0 -6648px #9b1d51;
+	display: inline-block;
+	width: 32px;
+	height: 30px;
+}
+
+.callUsBox p.phnNo strong {
+	position: relative;
+	top: -9px;
+	left: 10px;
+}
+
+.callUsBox p.greyNo {
+	background: #787878;
+}
+
+.callUsBox .phoneDirectory {
+	position: relative;
+	top: 10px;
+}
+
+.callUsBox .phoneDirectory .allPhoneNos {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 88%;
+	background: rgba(0, 0, 0, 0.8);
+	height: 100%;
+	display: none;
+}
+
+.callUsBox .phoneDirectory .allPhoneNos h4 {
+	background: #db155f;
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.callUsBox .phoneDirectory .allPhoneNos ul li {
+	display: inline-block;
+	color: #fff;
+	width: 49%;
+	vertical-align: top;
+	font-size: 13px;
+	padding: 0.3rem 1rem;
+}
+
+.callUsBox .phoneDirectory .allPhoneNos ul li span {
+	display: block;
+}
+
+.callUsBox .phoneDirectory:hover .allPhoneNos {
+	display: block;
+}
+
+.cmnBnr .fd-bannerTxt {
+	position: absolute;
+	top: 25%;
+}
+
+.cmnBnr .fd-bannerTxt h2 {
+	font-weight: 600;
+}
+
+.cmnBnr .fd-bannerTxt p {
+	margin: 10px 0 0;
+}
+
+.cmnBnr .fd-bannerTxt a.openFd {
+	background: #ae285d;
+	padding: 8px 15px;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 5px;
+	margin: 25px 0px 0;
+	color: #fff;
+}
+
+a.openFd:hover,
+a.openFd:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
+.cmnBnr .rupeeIcon-sm {
+	width: 9px;
+	margin: 0 2px;
+}
+
+.cmnBnr .rupeeIcon-blk {
+	width: 15px;
+	margin-top: -10px;
+}
+
+.car.ionSlider.newCalc .inpt-slider .irs .irs-single {
+	background: url("/images/default-source/revamp_new/retail_new/car.png") center center;
+	width: 30px;
+	height: 30px;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	top: -12px;
+}
+
+.cmnBnr .paraGraph.readMoreCont p {
+	margin-bottom: 10px;
+}
+
+.cmnBnr .freSection ul li:before {
+	float: left;
+	margin: 10px -30px;
+}
+
+.mrgNew {
+	margin: 15px 0 5px !important;
+}
+
+.loanHm {
+	margin: 20px 0 30px;
+}
+
+.rupeeIcon {
+	width: 10px;
+}
+
+.column .FdNote {
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+.fdCalc .selArrow:after {
+	content: "";
+	background: url("/images/default-source/revamp_new/loans/desktop/down-select.png") no-repeat center center;
+	font-size: inherit;
+	top: 10px;
+	width: 14px;
+	height: 8px;
+}
+
+.fdCalc .totalBox .finalResult span {
+	font-family: Lato-Regular;
+	font-weight: 300;
+	padding: 0px 0 10px;
+}
+
+.fdCalc .totalBox .finalResult .column span:nth-child(2) {
+	font-family: Lato-heavy;
+}
+
+.fdCalc .ionSlider.newCalc .inpt-slider .irs-with-grid {
+	width: 100%;
+	position: relative;
+	top: 0px;
+	left: 0;
+	height: inherit;
+}
+
+.fdCalc .dragText {
+	margin: 10px 0 0;
+}
+
+.disNone {
+	display: none;
+}
+
+.loanCalc.fdCalc .irs {
+	height: inherit !important;
+}
+
+.tenureSel input {
+	padding: 2px 0 5px 36px;
+}
+
+.tenureSel:before {
+	content: "";
+	background: #e1e4e9;
+	width: 35px;
+	height: 30px;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	position: absolute;
+	left: 0px;
+}
+
+.tenureSel span {
+	position: absolute;
+	font-size: 14px;
+	font-family: Lato;
+	padding: 4px;
+	left: 13%;
+	transform: translateX(-50%);
+}
+
+.tenureSel select {
+	padding: 3px 0 3px 36px !important;
+}
+
+.fdCalc .ionSlider.newCalc {
+	width: 100%;
+}
+
+.backArw {
+	display: none;
+	margin: 30px 0 0;
+}
+
+.fdPoints {
+	margin: 20px 0 0 15px;
+}
+
+.fdPoints li {
+	margin: 5px 0;
+	font-size: 13px;
+	list-style: square;
+}
+
+.tabHeading.disc {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.discTxt {
+	color: #858585;
+	line-height: 25px;
+}
+
+.middleFooterCon .links a,
+.footerMainUl a,
+.middleFooterCon h3 a {
+	text-decoration: none;
+}
+
+.middleFooterCon .links a:hover,
+.footerMainUl a:hover,
+.middleFooterCon h3 a:hover {
+	color: inherit;
+}
+
+.sip-sec .plBanner {
+	margin: 0px 0 10px;
+	position: relative;
+}
+
+.productForUBox .productsList ul li a {
+	text-decoration: none;
+}
+
+.otherInfoBlocks .infoBox p {
+	padding-bottom: 0;
+}
+
+.productForUBox.sipRelated .productsList ul.allProducts li em.goldLoan {
+	background-position: -208px -5272px;
+	width: 50px;
+	height: 60px;
+}
+
+.productForUBox.sipRelated .productsList ul.allProducts li:hover em.goldLoan {
+	background-position: -280px -5272px;
+}
+
+.productForUBox.sipRelated .productsList ul.allProducts li em.eduLoan {
+	background-position: -40px -5273px;
+	width: 55px;
+	height: 60px;
+}
+
+.productForUBox.sipRelated .productsList ul.allProducts li:hover em.eduLoan {
+	background-position: -115px -5272px;
+}
+
+.productForUBox.sipRelated .productsList ul.allProducts li em.loanAgShares {
+	background-position: -21px -3905px;
+	width: 60px;
+	height: 65px;
+}
+
+.productForUBox.sipRelated .productsList ul.allProducts li:hover em.loanAgShares {
+	background-position: -138px -3905px;
+}
+
+.productForUBox.sipRelated .productsList ul.allProducts li em.loanAgProperty {
+	background-position: -2px -674px;
+	width: 44px;
+	height: 55px;
+}
+
+.productForUBox.sipRelated .productsList ul.allProducts li:hover em.loanAgProperty {
+	background-position: -100px -674px;
+}
+
+.topMenu .loginDrpDown h2,
+.topMenu .loginDrpDown .accordian ul li h3,
+.middleFooterCon h3,
+.accordianBox h4 {
+	margin: 0;
+}
+
+@media (max-width: 767px) {
+	.homeLoanEmi .totalBox {
+		margin: 10px 0 0px 0px;
+		width: 100%;
+	}
+
+	.cmnBnr .fd-bannerTxt {
+		top: 12%;
+	}
+
+	.cmnBnr .fd-bannerTxt h2 {
+		font-size: 24px;
+	}
+
+	.loanHeading {
+		font-size: 22px;
+	}
+
+	.homeLoanEmi .freSection ul li ul li:before {
+		content: none;
+		margin: 10px 0 0;
+	}
+
+	.homeLoanEmi .freSection ul li ul li {
+		margin: 10px 0 0;
+	}
+
+	.freSection ul {
+		padding: 0 10px 0 25px;
+	}
+
+	.freSection {
+		padding: 15px 0 15px 15px;
+	}
+
+	.fdCalc .ionSlider.newCalc .inpt-slider .irs-with-grid,
+	.loan_amount .clssErrorMsg {
+		display: none;
+	}
+
+	.fdCalc .dragText {
+		margin: 10px 0 0;
+		display: none;
+	}
+
+	.fdNames.block {
+		display: block;
+		margin: 0 0 10px;
+	}
+
+	.currentDate {
+		margin: 0px 0 0;
+	}
+
+	.fdCalc .ionSlider.newCalc .inpt-slider .irs-with-grid {
+		margin-top: -20px;
+	}
+
+	.fdCalc .totalBox {
+		margin: 20px 0 20px 0px;
+		width: 100%;
+	}
+
+	.tenureSel {
+		width: 31.555%;
+	}
+
+	.loanCalc.fdCalc .ionSlider.newCalc {
+		padding: 0 0px 0px 5px;
+	}
+
+	.tenureSel span {
+		left: 16%;
+	}
+
+	.matDtl {
+		padding: 10px 0 15px 15px;
+	}
+
+	.fdCalc .ionSlider.newCalc .inpt-slider {
+		margin: 30px 0 0;
+	}
+
+	.footerMainUl h3,
+	.middleFooterCon h3,
+	.topMenu .loginSectMob ul {
+		margin: 0;
+	}
+
+	.sip-sec .totalBox {
+		margin: 20px 0 0 0;
+	}
+}
+
+@media (min-width: 528px) and (max-width: 767px) {
+	.tenureSel span {
+		left: 10%;
+	}
+
+	.fdCalc .ionSlider.newCalc .inpt-slider .irs-with-grid {
+		margin-top: 15px;
+	}
+}
+
+@media (min-width: 375px) and (max-width: 528px) {
+	.loanCalc.fdCalc .ionSlider.newCalc .inpt-slider .irs-with-grid {
+		margin-top: 0;
+	}
+}

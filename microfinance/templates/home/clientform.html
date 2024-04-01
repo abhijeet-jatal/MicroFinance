@@ -1,0 +1,77 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}<title>Client page</title>{% endblock %}
+
+
+{% block content %}
+<body style="background-color:#d4d6da">
+<div class="container">
+    <div class="jumbotron">
+        <center>      
+            <br><div style="background-color: teal; color:white;">
+            
+                <h2 >CLIENT DETAILS</h2>
+              </div></center>
+              
+        <form method="post">
+            {% csrf_token %}
+            <div class="row">
+              
+                
+                <div class="form-group col-md-6 mb-1">
+                    {{form.first_name|as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-2">
+                    {{form.middle_name|as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-2">
+                    {{form.last_name|as_crispy_field}}
+                </div>
+                
+                <div class="form-group col-md-6 mb-3">
+                    {{form.fathers_full_name|as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    {{form.date_of_birth|as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-4">
+                    {{form.gender|as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-4">
+                    {{form.maritual_status|as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-5">
+                    {{form.spouse_name|as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-5">
+                    {{form.email_id|as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-6">
+                    {{form.aadhar_number|as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-6">
+                    {{form.pan_number|as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-7">
+                    {{form.contact_no|as_crispy_field}}
+                </div>
+                <div class="form-group col-md-6 mb-7">
+                    {{form.alternate_contact_no|as_crispy_field}}
+                </div>
+                
+                
+                <div class="form-group col-md-6 mb-9">
+                    {{form.annual_income|as_crispy_field}}
+                </div>
+                
+                </div><br>
+                <center><input type="submit"  value="SAVE" class="btn btn-success " style="background-color: teal;"></center> 
+
+        </form>
+        
+    </div>
+</div>
+</body>
+{% endblock %}

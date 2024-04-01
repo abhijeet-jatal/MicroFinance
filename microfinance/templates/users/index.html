@@ -1,0 +1,39 @@
+{% extends 'base1.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>add user</title>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="form-block">
+                  <div class="mb-4">
+                      <h1>Bank </h1>
+                  </div>
+                  <label>Log in if you already have registered!</label>
+                  <div class="form-group last mb-4">
+                      <div><a href="{% url 'login' %}"><button class="btn btn-pill text-white btn-block btn-success">login</button></a></div>
+                  </div>
+                  <label>If not register here!</label>
+                  <div class="form-group last mb-4">
+                      <div><a href="{% url 'adduser' %}"><button class="btn btn-pill text-white btn-block btn-warning">Register</button></a></div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

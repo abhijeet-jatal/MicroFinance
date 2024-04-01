@@ -1,0 +1,35 @@
+{% extends 'base1.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>user login</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="form-block jumbotron">
+                    <div class="text-dark"><h3 style="text-align: center;">SIGN UP</h3>
+                      <div class="mb-4">  
+                      </div>   
+                <form method="post">
+                    {% csrf_token %}
+                        {{form|crispy}}
+
+                <input type="submit" value="Register" class="btn btn-pill text-white btn-block" style="background-color:teal;"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,157 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+    {% block title %}
+    <title>ADDRESS FORM</title>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript">
+
+        function FillAddressInput()
+            {
+               let checkBox= document.getElementById('checkBox');
+               console.log('felling')
+
+        
+               let pAddressLine1 = document.getElementById("id_address_line1").value;
+
+             
+               let pAddressLine2 = document.getElementById("id_address_line2").value;
+               let pCity = document.getElementById("id_city").value;
+               let pPincode = document.getElementById("id_pincode").value;
+               let pLandmark = document.getElementById("id_landmark").value;
+               let pDistrict = document.getElementById("id_district").value;
+               let pState = document.getElementById("id_state").value;
+               let pCountry = document.getElementById("id_country").value;
+               if (checkBox.checked == true){
+                document.getElementById("id_paddress_line1").value=pAddressLine1;
+                document.getElementById("id_paddress_line2").value=pAddressLine2;
+                document.getElementById("id_pcity").value=pCity;
+               document.getElementById("id_ppincode").value=pPincode;
+               document.getElementById("id_plandmark").value=pLandmark;
+               document.getElementById("id_pdistrict").value=pDistrict;
+               document.getElementById("id_pstate").value=pState;
+               document.getElementById("id_pcountry").value=pCountry;
+              }
+               else{
+                document.getElementById("id_paddress_line1").value='';
+                document.getElementById("id_paddress_line2").value='';
+                document.getElementById("id_pcity").value='';
+               document.getElementById("id_ppincode").value='';
+               document.getElementById("id_plandmark").value='';
+               document.getElementById("id_pdistrict").value='';
+               document.getElementById("id_pstate").value='';
+               document.getElementById("id_pcountry").value='';
+               }
+        
+              
+         }
+            
+        </script>
+</head>
+{% endblock %}
+
+
+
+
+{% block content %}
+<body style="background-color:#d4d6da">
+<div class="container">
+
+        <div class="jumbotron" >
+            
+            <center>      
+                <br><div style="background-color: teal; color:white;">
+                
+                    <h2 >CURRENT ADDRESS FORM</h2>
+                  </div></center>
+<form method = 'post'>
+    {% csrf_token %}
+    <div class="row" >
+        <div class="form-group col-md-6 mb-2">
+            {{form1.client|as_crispy_field}}
+        </div>
+        <div class="form-group col-md-6 mb-2">
+            {{form1.address_line1|as_crispy_field}}
+        </div>
+        <div class="form-group col-md-6 mb-2">
+            {{form1.address_line2|as_crispy_field}}
+        </div>
+        <div class="form-group col-md-6 mb-2">
+            {{form1.city|as_crispy_field}}
+        </div>
+        <div class="form-group col-md-6 mb-2">
+            {{form1.pincode|as_crispy_field}}
+        </div>
+        <div class="form-group col-md-6 mb-2">
+            {{form1.landmark|as_crispy_field}}
+        </div>
+        <div class="form-group col-md-6 mb-2">
+            {{form1.district|as_crispy_field}}
+        </div>
+       
+        <div class="form-group col-md-6 mb-2">
+            {{form1.state|as_crispy_field}}
+        </div>
+       
+        <div class="form-group col-md-6 mb-2">
+            {{form1.country|as_crispy_field}}
+        </div>
+</div>
+    </div>
+    
+     <input type="checkbox" id="checkBox"  onclick="FillAddressInput()"> Same as permanent address
+    
+    <br><br>
+    
+    <div class="jumbotron">
+        <center>      
+            <br><div style="background-color: teal; color:white;">
+            
+                <h2 >PERMANENT ADDRESS</h2>
+              </div></center>
+        
+ 
+         {% csrf_token %}
+    <div class="row" >
+
+    <div class="form-group col-md-6 mb-2">
+        {{form2.paddress_line1|as_crispy_field}}
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        {{form2.paddress_line2|as_crispy_field}}
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        {{form2.pcity|as_crispy_field}}
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        {{form2.ppincode|as_crispy_field}}
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        {{form2.plandmark|as_crispy_field}}
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        {{form2.pdistrict|as_crispy_field}}
+    </div>
+   
+    <div class="form-group col-md-6 mb-2">
+        {{form2.pstate|as_crispy_field}}
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        {{form2.pcountry|as_crispy_field}}
+    </div>
+    
+   
+    </div>
+  
+    <center><input type="submit"  value="SAVE" class="btn btn-success" style="background-color: teal;"/></center> 
+        </div></div>
+</form>
+        </div>
+</div>
+</body>
+    {% endblock %}
+

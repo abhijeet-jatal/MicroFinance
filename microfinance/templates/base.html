@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet"/>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}"/>
+
+    <!-- Extra Link Block -->
+    {% block extra_links %} {% endblock %}
+
+    <!-- CSS Block -->
+    {% block extra_css %}{% endblock %}
+
+    <!-- Title Block -->
+    <title>{% block title %}{% endblock %}</title>
+
+</head>
+<body>
+<header id="masthead" class="site-header">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container nav-cont">
+            <a class="site-title"><span></span> MicroFinance</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-right" id="navbarNavDropdown">
+                <ul class="nav navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Loans
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="{% url 'enquiry' %}">Apply</a></li>
+                            <li><a class="dropdown-item" href="#">Check Status</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="{% url 'adduser' %}">Signup</a>-->
+<!--                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+{% block messages %}
+{% if messages %}
+{% for message in messages %}
+{% if message.tags == 'error' %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-8">
+        <div class='alert alert-danger alert-dismissible fade show' role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="text-center">
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close float-right" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% endblock content %}
+
+
+<footer id="colophon" class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <a class="site-title"><span></span> MicroFinance</a>
+                <p>
+                    We're a digital bank focused on creative and results-driven
+                    solutions.
+                </p>
+                <p>
+                    We measure our success by the results we drive for our clients.
+                </p>
+            </div>
+            <div
+                    class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6"
+            >
+                <h3>Keep in touch</h3>
+                <ul class="list-unstyled contact-links">
+                    <li>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:sff@microfinance.org"
+                        >microfinance.org</a
+                        >
+                    </li>
+                    <li>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <a href="tel:+37400800000">+91 80 08 00 00 00 </a>
+                    </li>
+                    <li>
+                        <i class="fa fa-fax" aria-hidden="true"></i>
+                        <a href="+918000000000">+91 90 09 00 00 00</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <p>Pune</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix visible-xs"></div>
+<!--            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">-->
+<!--                <h3>links</h3>-->
+<!--                <ul class="list-unstyled">-->
+<!--                    <li class="active"><a href="index.html">Home</a></li>-->
+<!--                    <li><a href="blog.html">Blog</a></li>-->
+<!--                    <li><a href="portfolio.html">Porfolio</a></li>-->
+<!--                    <li><a href="contact.html">Contact</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="social-links">
+                        <a class="twitter-bg" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="facebook-bg" href="#"
+                        ><i class="fa fa-facebook"></i
+                        ></a>
+                        <a class="pinterest" href="#"
+                        ><i class="fa fa-pinterest"></i
+                        ></a>
+                        <a class="linkedin-bg" href="#"
+                        ><i class="fa fa-linkedin"></i
+                        ></a>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="text-right">
+                        <p>Microfinance</p>
+                        <p>All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% block js %}
+<script type="text/javascript" src="{% static 'js/jquery-3.6.0.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+{% block extra_js %} {% endblock %}
+{% endblock js %}
+
+</body>
+</html>

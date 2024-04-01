@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_links %}
+    <!-- Slider Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ion.rangeSlider.css' %}"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/new_calc_style.css' %}"/>
+
+{% endblock %}
+m
+
+{% block content %}
+<!--<div class="row px-5" style="padding-top:120px">-->
+<!--    <div class="col-md-7 col-xs-12">-->
+<!--        <div class="loanCalc">-->
+<!--            <article class="col-md-8 col-xs-12">-->
+<!--                <div class="ionSlider newCalc">-->
+<!--                    <div class="inpt-slider">-->
+<!--                        <div class="inpt-statement loan_amount">-->
+<!--                            <label for="loan_amount">Loan Amount (<img class="rupeeIcon" src="{% static 'img/rupee-24.png' %}"/>)</label>-->
+<!--                            <input class="inpt inputBox numbersOnly loanAmt pull-right" data-maxval="1500000" data-minval="50000"-->
+<!--                                   id="loan_amount" maxlength="8" name="mnthsavings" type="text"/>-->
+<!--                        </div><br>-->
+<!--                        <input class="sliderInpt irs-hidden-input" id="loanAmtSlider" name="slider" type="text"-->
+<!--                               readonly="" style="visibility: hidden"/>-->
+
+<!--                    </div>-->
+<!--                    <div class="inpt-slider">-->
+<!--                        <div class="inpt-statement interest_rate">-->
+<!--                            <label for="interest_rate">Interest Rate (p.a)</label>-->
+<!--                            <input class="inputBox inpt numbersDecimal pull-right" data-maxval="24" data-minval="10.49"-->
+<!--                                   id="interest_rate" maxlength="4" name="mnthsavings" type="text"/>-->
+<!--                        </div><br>-->
+<!--                        <input class="sliderInpt irs-hidden-input" id="intrRateSlider" name="slider" type="text"-->
+<!--                               readonly="" style="visibility: hidden"/>-->
+
+<!--                    </div>-->
+<!--                    <div class="inpt-slider">-->
+<!--                        <div class="inpt-statement tenure">-->
+<!--                            <label for="tenure">Tenure (months)</label>-->
+<!--                            <input class="inputBox inpt numbersOnly pull-right" data-maxval="60" data-minval="1" id="tenure"-->
+<!--                                   maxlength="3" name="mnthsavings" type="text"/>-->
+<!--                        </div><br>-->
+<!--                        <input class="sliderInpt irs-hidden-input" id="tensureSlider" name="slider" type="text"-->
+<!--                               readonly="" style="visibility: hidden"/>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </article>-->
+<!--            <article class="col-md-4 col-xs-12 totalBox">-->
+<!--                <div class="finalResult" style="visibility: hidden">-->
+<!--                    <span>Equated Monthly Installments (EMI)</span>-->
+<!--                    <div class="clearfix"></div>-->
+<!--                    <img class="rupeeIcon-blk" src="#"/><span id="lblEMIAmt">9,321</span>-->
+<!--                </div>-->
+<!--            </article>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-4 col-xs-12" tabindex="0">-->
+<!--        <h3 class="tabHeading breakHead">-->
+<!--            <strong>Break-up of </strong>Total Payment-->
+<!--        </h3>-->
+<!--        <div class="semiColmn princAmt">-->
+<!--            <span class="princClr">Principal Amt(<img class="rupeeIcon" src="{% static 'img/rupee-24.png' %}"/>)</span>-->
+<!--            <div class="pull-right">-->
+<!--                <span id="princAmt">2,01,000</span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="semiColmn princAmt">-->
+<!--            <span class="princClr">EMI(<img class="rupeeIcon" src="{% static 'img/rupee-24.png' %}"/>)</span>-->
+<!--            <div class="pull-right">-->
+<!--                <span id="emiAmt">2,01,000</span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="semiColmn intAmt">-->
+<!--            <span class="intClr">Interest Amt(<img class="rupeeIcon" src="{% static 'img/rupee-24.png' %}"/>)</span>-->
+<!--            <div class="pull-right">-->
+<!--                <span id="intrAmt">22,696</span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="semiColmn totPay">-->
+<!--            <span>Total Amt Payable(<img class="rupeeIcon" src="{% static 'img/rupee-24.png' %}"/>)</span>-->
+<!--            <div class="pull-right">-->
+<!--                <span id="totalPayAmt">2,23,696</span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<div class="row px-5" style="padding-top:120px">
+    <div class="col-md-7 col-xs-12">
+        <div class="loanCalc">
+            <article class="col-md-8 col-xs-12">
+                <div class="ionSlider newCalc">
+                    <div class="inpt-slider">
+                        <div class="inpt-statement loan_amount">
+                            <label for="loan_amount">Loan Amount (<img class="rupeeIcon" src="{% static 'img/rupee-24.png' %}"/>)</label>
+                            <input class="inpt inputBox numbersOnly loanAmt pull-right" data-maxval="1500000" data-minval="50000"
+                                   id="loan_amount" maxlength="8" name="mnthsavings" type="text"/>
+                        </div><br>
+                        <input class="sliderInpt irs-hidden-input" id="loanAmtSlider" name="slider" type="text"
+                               readonly="" style="visibility: hidden"/>
+
+                    </div>
+                    <div class="inpt-slider">
+                        <div class="inpt-statement interest_rate">
+                            <label for="interest_rate">Interest Rate (p.a)</label>
+                            <input class="inputBox inpt numbersDecimal pull-right" data-maxval="24" data-minval="10.49"
+                                   id="interest_rate" maxlength="4" name="mnthsavings" type="text"/>
+                        </div><br>
+                        <input class="sliderInpt irs-hidden-input" id="intrRateSlider" name="slider" type="text"
+                               readonly="" style="visibility: hidden"/>
+
+                    </div>
+                    <div class="inpt-slider">
+                        <div class="inpt-statement tenure">
+                            <label for="tenure">Tenure (months)</label>
+                            <input class="inputBox inpt numbersOnly pull-right" data-maxval="60" data-minval="1" id="tenure"
+                                   maxlength="3" name="mnthsavings" type="text"/>
+                        </div><br>
+                        <input class="sliderInpt irs-hidden-input" id="tensureSlider" name="slider" type="text"
+                               readonly="" style="visibility: hidden"/>
+
+                    </div>
+                </div>
+            </article>
+            <article class="col-md-4 col-xs-12 totalBox">
+                <div class="finalResult" style="visibility: hidden">
+                    <span>Equated Monthly Installments (EMI)</span>
+                    <div class="clearfix"></div>
+                    <img class="rupeeIcon-blk" src="#"/><span id="lblEMIAmt">9,321</span>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="col-md-4 col-xs-12" tabindex="0">
+        <h3 class="tabHeading breakHead">
+            <strong>Break-up of </strong>Total Payment
+        </h3>
+        <div class="semiColmn princAmt">
+            <span class="princClr">Principal Amt(<img class="rupeeIcon" src="{% static 'img/rupee-24.png' %}"/>)</span>
+            <div class="pull-right">
+                <span id="princAmt">2,01,000</span>
+            </div>
+        </div>
+        <div class="semiColmn princAmt">
+            <span class="princClr">EMI(<img class="rupeeIcon" src="{% static 'img/rupee-24.png' %}"/>)</span>
+            <div class="pull-right">
+                <span id="emiAmt">2,01,000</span>
+            </div>
+        </div>
+        <div class="semiColmn intAmt">
+            <span class="intClr">Interest Amt(<img class="rupeeIcon" src="{% static 'img/rupee-24.png' %}"/>)</span>
+            <div class="pull-right">
+                <span id="intrAmt">22,696</span>
+            </div>
+        </div>
+        <div class="semiColmn totPay">
+            <span>Total Amt Payable(<img class="rupeeIcon" src="{% static 'img/rupee-24.png' %}"/>)</span>
+            <div class="pull-right">
+                <span id="totalPayAmt">2,23,696</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block extra_js%}
+<!--<script type="text/javascript" src="{% static 'js/new_calc.js' %}"></script>-->
+<script type="text/javascript" src="{% static 'js/ion.rangeSlider.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/emi_calc.js' %}"></script>
+{% endblock %}

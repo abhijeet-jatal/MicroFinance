@@ -1,0 +1,28 @@
+{% extends "base1.html" %} {% block content %}
+
+<!--<div class="jumbotron" height="100%"  >-->
+  {% load crispy_forms_tags %}
+  
+  <body style="background-color:#d4d6da">
+    <div class="container">
+        <div class="jumbotron" >
+            <form method="post">
+                <center>      
+                <br><div style="background-color: teal; color:white;">
+                
+                    <h2 >Loan Required</h2>
+                  </div></center>
+                
+                {% csrf_token %}
+                {{ form|crispy }}
+                
+                    <center><input type="submit"  value="SAVE" class="btn text-light" style="background-color: teal;">
+                    
+                </center>
+            </form>
+            
+        </div>
+    </div>
+    </body>
+
+{% endblock  %}

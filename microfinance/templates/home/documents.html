@@ -1,0 +1,69 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}<title>Documents</title>{% endblock %}
+
+
+{% block content %}
+<body style="background-color:#d4d6da">
+<div class="container">
+    <div class="jumbotron">
+        <center>      
+            <br><div style="background-color: teal; color:white;">
+            
+                <h2 >CLIENT DOCUMENTS DETAILS</h2>
+              </div></center>
+        
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row" >
+                <div class="form-group col-md-6 mb-2">
+                    {{form.client|as_crispy_field}}
+                </div>
+            <div class="form-group col-md-6 mb-1">
+                {{form.pan_card|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-6 mb-1">
+                {{form.aadhar_card|as_crispy_field}}
+            </div>
+           
+            <div class="form-group col-md-6 mb-2">
+                {{form.bank_statment|as_crispy_field}}
+            </div>
+            <br>
+            <div class="form-group col-md-6 mb-3">
+                {{form.photo|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-6 mb-3">
+                {{form.signature|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-6 mb-4">
+                {{form.salary_slip|as_crispy_field}}
+            </div>
+            
+            <div class="form-group col-md-6 mb-5">
+                {{form.declaration|as_crispy_field}}
+            </div>
+        </div>
+            <center><input type="submit"  value="SAVE" class="btn btn-success" style="background-color: teal;"></center>  
+           
+
+            </div>
+
+            <br>
+
+            
+            
+           
+        </form>      
+                
+            
+                
+            
+
+       
+    </div>
+</div>
+</body>
+{% endblock %}

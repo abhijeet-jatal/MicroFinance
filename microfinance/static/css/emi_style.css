@@ -1,0 +1,106 @@
+
+#loan-container{
+	text-align:left;
+	max-width: 1200px;
+	margin: 20px auto;
+	box-sizing: border-box;
+}
+
+.box-pane{
+	border: 1px solid #ddd;
+	border-radius: 1rem;
+	padding:25px;
+	box-sizing: border-box;
+	min-height:500px;
+}
+
+
+.heading-title{
+	font-size:1.35em;
+	margin-bottom:15px;
+}
+
+#repayment-total{
+	float:left;
+	width:100%;
+}
+
+#repayment-cycle{
+	width:48%;
+	float:right;
+	text-align:right;
+}
+
+.row-input{
+	margin-bottom:20px;
+}
+
+.row-input label{
+	padding:5px 0;
+	display:block;
+}
+
+.row-input input, .row-input select{
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 9px 15px 10px;
+	outline: none;
+	border-radius:5px;
+	font-size:1em;
+}
+
+.input-wrap{
+	position:relative;
+}
+
+.currency-code{
+	position:absolute;
+	left:3px;
+	top:9px;
+}
+
+.percentage-code{
+	position:absolute;
+	left:75px;
+	top:9px;
+}
+
+.note-text{
+	font-size:0.8em;
+	font-style:italic;
+	padding-top:5px;
+}
+
+.range-slider{
+	margin:15px 0 65px 0;
+}
+
+
+.noUi-value{
+	margin-top:4px;
+	font-size:1em;
+}
+
+.short-input{
+	width:80px;
+}
+
+.bold{
+	font-weight:normal;
+}
+
+.loan-value{
+	font-size:1.3em;
+	font-weight:bold;
+}
+
+.orange-text{
+	color: #f56a00;
+}
+
+#graph-chart{
+	width:100%;
+	height:400px;
+}
+
+
